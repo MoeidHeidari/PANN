@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build",
+  "command": "/usr/bin/clang++    -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -o CMakeFiles/PANN.dir/main.cpp.o -c /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/main.cpp",
+  "file": "/Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/main.cpp"
+}
+]
