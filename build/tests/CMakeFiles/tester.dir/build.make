@@ -80,15 +80,15 @@ include tests/CMakeFiles/tester.dir/flags.make
 tests/CMakeFiles/tester.dir/Maintest.cpp.o: tests/CMakeFiles/tester.dir/flags.make
 tests/CMakeFiles/tester.dir/Maintest.cpp.o: ../tests/Maintest.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/tester.dir/Maintest.cpp.o"
-	cd /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/tests && /usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tester.dir/Maintest.cpp.o -c /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/tests/Maintest.cpp
+	cd /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/tests && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tester.dir/Maintest.cpp.o -c /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/tests/Maintest.cpp
 
 tests/CMakeFiles/tester.dir/Maintest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tester.dir/Maintest.cpp.i"
-	cd /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/tests/Maintest.cpp > CMakeFiles/tester.dir/Maintest.cpp.i
+	cd /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/tests/Maintest.cpp > CMakeFiles/tester.dir/Maintest.cpp.i
 
 tests/CMakeFiles/tester.dir/Maintest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tester.dir/Maintest.cpp.s"
-	cd /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/tests && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/tests/Maintest.cpp -o CMakeFiles/tester.dir/Maintest.cpp.s
+	cd /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/tests && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/tests/Maintest.cpp -o CMakeFiles/tester.dir/Maintest.cpp.s
 
 # Object files for target tester
 tester_OBJECTS = \

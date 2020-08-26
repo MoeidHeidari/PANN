@@ -14,7 +14,7 @@ CostDataFile:
 Site: Moeids-MacBook-Air.local
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
-BuildName: Darwin-clang++
+BuildName: Darwin-c++
 
 # Subprojects
 LabelsForSubprojects: 
@@ -62,7 +62,7 @@ UpdateOptions:
 UpdateType: git
 
 # Compiler info
-Compiler: /usr/bin/clang++
+Compiler: /Library/Developer/CommandLineTools/usr/bin/c++
 CompilerVersion: 11.0.3.11030032
 
 # Dynamic analysis (MemCheck)
