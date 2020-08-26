@@ -1,7 +1,7 @@
 /**
  * @file PANN_PCH.h
  * @author Moeid Heidari (moiedheidari@moeidheidari.com)
- * @brief 
+ * @brief this file contains most Common used header files
  * @version 0.1
  * @date 2020-08-26
  * 
@@ -9,6 +9,7 @@
  * 
  */
 /*
+
                                  Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
@@ -212,3 +213,8 @@
    limitations under the License.
 
 */
+
+#include <iostream>
+#include <stdio.h>
+#include <algorithm>
+

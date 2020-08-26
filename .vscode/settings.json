@@ -88,5 +88,6 @@
         ]
     },
     "license.extension": "txt",
+    "C_Cpp.dimInactiveRegions": false,
     
 }

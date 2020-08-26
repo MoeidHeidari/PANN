@@ -1,7 +1,8 @@
 /**
  * @file Prerequisites.h
  * @author Moeid Heidari (Moeidheidari@moeidheidari.com)
- * @brief 
+ * @brief this is a prerequisit file contains a list of pre-processors defined to have the necessary information
+ * about platform,compiler, versions, availibility of platform dependent features.etc.
  * @version 0.1
  * @date 2020-08-26
  * 
@@ -220,37 +221,39 @@
  */
  namespace PANN
  {
-     /** @brief if the program is running on WINDOWS*/
+     /*! \def PANN_WINDOWS_PLATFORM
+      * @brief Define Windows platform as 1*/
      #define PANN_WINDOWS_PLATFORM   1
-     /** @brief if the program is running on WINDOWS*/
+     /** @brief Define MAC platform as 2*/
      #define PANN_MAC_PLATFORM       2
-     /** @brief if the program is running on WINDOWS*/
+     /** @brief Define LINUX platform as 3*/
      #define PANN_LINUX_PLATFORM     3
     // ────────────────────────────────────────────────────────────────────────────────
 
-     /** @brief if the program is running on WINDOWS*/
+     /** @brief Define MSCV compiler as 1*/
      #define PANN_MSVC_COMPILER          1
-     /** @brief if the program is running on WINDOWS*/
+     /** @brief Define CLANG compiler as 2*/
      #define PANN_CLANG_COMPILER         2
-     /** @brief if the program is running on WINDOWS*/
+     /** @brief Define GNU compiler as 3*/
      #define PANN_GNUC_COMPILER          3
-     /** @brief if the program is running on WINDOWS*/
+     /** @brief Define APPLECLANG compiler as 4*/
      #define PANN_APPLECLANG_COMPILER    4
      // ────────────────────────────────────────────────────────────────────────────────
 
-     /** @brief if the program is running on WINDOWS*/
+     /** @brief Define Little_Indian byte order as 1*/
      #define PANN_LITTLE_ENDIAN  1
-     /** @brief if the program is running on WINDOWS*/
+     /** @brief Define Big_Indian byte order as 2*/
      #define PANN_BIG_ENDIAN     2
      // ────────────────────────────────────────────────────────────────────────────────
 
-     /** @brief if the program is running on WINDOWS*/
+     /** @brief Define 32 bit architecture as 1 */
      #define PANN_32BIT_ARCHITECTURE     1
-     /** @brief if the program is running on WINDOWS*/
+     /** @brief Define 64 bit architecture as 2*/
      #define PANN_64BIT_ARCHITECTURE     2
 
 //====================================================================================================================================
-     /** @brief if the program is running on WINDOWS*/
+     /** @brief checks on which platform the program is running on 
+      * and set the PANN_PLATFORM with the appropriate value */
      #if    defined (__WIN32__) || defined (__WIN32)
      #      define PANN_PLATFORM PANN_WINDOWS_PLATFORM
      #elif  defined (__APPLE_CC__)
@@ -258,8 +261,8 @@
      #else
      #      define PANN_PLATFORM PANN_LINUX_PLATFORM
      #endif
-     
-     /** @brief if the program is running on WINDOWS*/
+     // ────────────────────────────────────────────────────────────────────────────────
+     /** @brief Check the compiler type which is compiling the programm*/
      #if    defined(__clang__)
      
      #if    defined __aplle_build_version__
@@ -274,14 +277,16 @@
      #else
      #   error "No known compiler"
      #endif
-     
-     /** @brief if the program is running on WINDOWS*/
+     // ────────────────────────────────────────────────────────────────────────────────
+     /** @brief check the architecture type*/
      #if    defined(__x86_64__) || defined(_M_X64) || defined(__powerpc64__) || defined(__alpha__) ||\
             defined(__ia64__) || defined(__s390__) || defined(__s390x__) || defined(_LP64) || defined(__LP64__)
      #      define PANN_ARCH_TYPE PANN_ARCH_64
      #else
      #      define PANN_ARCH_TYPE PANN_ARCH_32
      #endif
+     // ────────────────────────────────────────────────────────────────────────────────
+     /** @brief check if we can use inline or fore_inline based on the compiler type*/
      #if    PANN_COMPILER == PANN_MSVC_COMPILER
      #      define PANN_INLINE          inline
      #      define PANN_FORCE_INLINE    __forceinline o
@@ -295,9 +300,8 @@
      #      define PANN_INLINE         inline
      #      define PANN_FORCE_INLINE   inline 
      #endif
-     
-     /** @brief if the program is running on WINDOWS*/
-      #endif
+     // ────────────────────────────────────────────────────────────────────────────────
+     /** @brief check the availability of constexpressions*/
      #if    PANN_COMPILER == PANN_MSVC_COMPILER
      #      if !define(__cpp_constexpr) || (__cpp_1 < 201304)
      #      define PANN_NO_CPP11_CONSTEXPR_AVAILABLE
@@ -307,8 +311,7 @@
      #      define PANN_NO_CPP17_CONSTEXPR_AVAILABLE
      #      endif
      #endif
-
-     /** @brief if the program is running on WINDOWS*/
+     // ────────────────────────────────────────────────────────────────────────────────
      #if PANN_COMPILER == PANN_COMPILER_GNUC ||  PANN_COMPILER == PANN_COMPILER_CLANG || PANN_COMPILER == PANN_COMPILER_APPLECLANG
      #   if !defined(__cpp_constexpr) || (__cpp_constexpr < 201304)
      #       define PANN_NO_CPP14_CONSTEXPR_AVAILABLE
@@ -320,8 +323,7 @@
      #       define PANN_NO_CPP17_CONSTEXPR_AVAILABLE
      #   endif
      #endif
-
-     /** @brief if the program is running on WINDOWS*/
+     // ────────────────────────────────────────────────────────────────────────────────
      #if defined(PANN_NO_CXX11_CONSTEXPR)
      #   define PANN_CONSTEXPR
      #   define PANN_CONSTEXPR_OR_CONST const
@@ -329,14 +331,13 @@
      #   define PANN_CONSTEXPR constexpr
      #   define PANN_CONSTEXPR_OR_CONST constexpr
      #endif
-
-     /** @brief if the program is running on WINDOWS*/
+     // ────────────────────────────────────────────────────────────────────────────────
      #if defined(PANN_NO_CXX14_CONSTEXPR)
      #   define PANN_CXX14_CONSTEXPR
      #else
      #   define PANN_CXX14_CONSTEXPR constexpr
      #endif
-    /** @brief if the program is running on WINDOWS*/
+     // ────────────────────────────────────────────────────────────────────────────────
      #ifdef PANN_NO_CXX11_NOEXCEPT
      #   define PANN_NOEXCEPT
      #   define PANN_NOEXCEPT_OR_NOTHROW throw()
@@ -344,7 +345,7 @@
      #   define PANN_NOEXCEPT noexcept
      #   define PANN_NOEXCEPT_OR_NOTHROW noexcept
      #endif
-     /** @brief if the program is running on WINDOWS*/
+     // ────────────────────────────────────────────────────────────────────────────────
      #define PANN_STATIC_CONSTEXPR static PANN_CONSTEXPR_OR_CONST
     
 }
