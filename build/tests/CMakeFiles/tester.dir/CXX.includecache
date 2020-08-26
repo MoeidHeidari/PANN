@@ -6,5 +6,21 @@
 
 #IncludeRegexTransform: 
 
+/Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/src/lib/include/Sample.h
+iostream
+-
+
+/Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/tests/Base.hh
+iostream
+-
+stdexcept
+-
+string
+-
+
 /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/tests/Maintest.cpp
+../src/lib/include/Sample.h
+/Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/src/lib/include/Sample.h
+Base.hh
+/Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/tests/Base.hh
 

@@ -2,8 +2,8 @@
 class Sample
 {
     public:
-    void testFunction()
+    int testFunction()
     {
-        std::cout<<"hello from liberary!\n";
+        return 112;
     }
 };
