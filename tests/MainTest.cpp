@@ -5,6 +5,7 @@ void runTest()
 {
     Sample s;
     
+    //this comment
     PANN_ASSERT_EQUAL(s.testFunction(),114);
 
 }
