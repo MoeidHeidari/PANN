@@ -61,8 +61,10 @@
         "unordered_map": "cpp",
         "utility": "cpp",
         "vector": "cpp",
-        "boost/math/special_functions/sign.hpp": "cpp"
+        "boost/math/special_functions/sign.hpp": "cpp",
+        
     },
+    "doxygen_runner.configuration_file_override": "${workspaceFolder}/documentation/PANN",
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -84,5 +86,6 @@
                 }
             }
         ]
-    }
+    },
+    
 }

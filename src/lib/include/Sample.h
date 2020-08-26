@@ -4,6 +4,6 @@ class Sample
     public:
     int testFunction()
     {
-        return 112;
+        return 114;
     }
 };
