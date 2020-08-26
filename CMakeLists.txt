@@ -8,7 +8,7 @@ enable_testing()
 ADD_SUBDIRECTORY( tests )
 
 add_executable(PANN src/main.cpp)
-find_package (Boost 1.55.0 REQUIRED COMPONENTS system filesystem)
+find_package (Boost 1.55.0 COMPONENTS system filesystem)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
