@@ -77,28 +77,30 @@ include CMakeFiles/PANN.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/PANN.dir/flags.make
 
-CMakeFiles/PANN.dir/main.cpp.o: CMakeFiles/PANN.dir/flags.make
-CMakeFiles/PANN.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PANN.dir/main.cpp.o"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PANN.dir/main.cpp.o -c /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/main.cpp
+CMakeFiles/PANN.dir/src/main.cpp.o: CMakeFiles/PANN.dir/flags.make
+CMakeFiles/PANN.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PANN.dir/src/main.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PANN.dir/src/main.cpp.o -c /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/src/main.cpp
 
-CMakeFiles/PANN.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PANN.dir/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/main.cpp > CMakeFiles/PANN.dir/main.cpp.i
+CMakeFiles/PANN.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PANN.dir/src/main.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/src/main.cpp > CMakeFiles/PANN.dir/src/main.cpp.i
 
-CMakeFiles/PANN.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PANN.dir/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/main.cpp -o CMakeFiles/PANN.dir/main.cpp.s
+CMakeFiles/PANN.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PANN.dir/src/main.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/src/main.cpp -o CMakeFiles/PANN.dir/src/main.cpp.s
 
 # Object files for target PANN
 PANN_OBJECTS = \
-"CMakeFiles/PANN.dir/main.cpp.o"
+"CMakeFiles/PANN.dir/src/main.cpp.o"
 
 # External object files for target PANN
 PANN_EXTERNAL_OBJECTS =
 
-PANN: CMakeFiles/PANN.dir/main.cpp.o
+PANN: CMakeFiles/PANN.dir/src/main.cpp.o
 PANN: CMakeFiles/PANN.dir/build.make
+PANN: /usr/local/lib/libboost_system-mt.dylib
+PANN: /usr/local/lib/libboost_filesystem-mt.dylib
 PANN: CMakeFiles/PANN.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable PANN"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PANN.dir/link.txt --verbose=$(VERBOSE)

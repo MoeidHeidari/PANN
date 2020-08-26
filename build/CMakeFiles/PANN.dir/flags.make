@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk  
 
-CXX_DEFINES = 
+CXX_DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SYSTEM_DYN_LINK
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -isystem /usr/local/include 
 

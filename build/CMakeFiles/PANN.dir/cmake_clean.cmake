@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/PANN.dir/main.cpp.o"
+  "CMakeFiles/PANN.dir/src/main.cpp.o"
   "PANN"
   "PANN.pdb"
 )

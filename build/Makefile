@@ -540,32 +540,45 @@ Experimental/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Experimental.dir/build.make CMakeFiles/Experimental.dir/build
 .PHONY : Experimental/fast
 
-main.o: main.cpp.o
+#=============================================================================
+# Target rules for targets named tester
 
-.PHONY : main.o
+# Build rule for target.
+tester: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tester
+.PHONY : tester
+
+# fast build rule for target.
+tester/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tester.dir/build.make tests/CMakeFiles/tester.dir/build
+.PHONY : tester/fast
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PANN.dir/build.make CMakeFiles/PANN.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PANN.dir/build.make CMakeFiles/PANN.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
+src/main.i: src/main.cpp.i
 
-.PHONY : main.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PANN.dir/build.make CMakeFiles/PANN.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PANN.dir/build.make CMakeFiles/PANN.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
+src/main.s: src/main.cpp.s
 
-.PHONY : main.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PANN.dir/build.make CMakeFiles/PANN.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PANN.dir/build.make CMakeFiles/PANN.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -607,9 +620,10 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... PANN"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... tester"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

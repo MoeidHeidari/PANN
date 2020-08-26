@@ -74,11 +74,12 @@ CMAKE_BINARY_DIR = /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build
 
 # The main recursive "all" target.
 all: CMakeFiles/PANN.dir/all
+all: tests/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: tests/preinstall
 
 .PHONY : preinstall
 
@@ -112,8 +113,27 @@ clean: CMakeFiles/NightlyStart.dir/clean
 clean: CMakeFiles/ExperimentalMemCheck.dir/clean
 clean: CMakeFiles/Continuous.dir/clean
 clean: CMakeFiles/Experimental.dir/clean
+clean: tests/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory tests
+
+# Recursive "all" directory target.
+tests/all: tests/CMakeFiles/tester.dir/all
+
+.PHONY : tests/all
+
+# Recursive "preinstall" directory target.
+tests/preinstall:
+
+.PHONY : tests/preinstall
+
+# Recursive "clean" directory target.
+tests/clean: tests/CMakeFiles/tester.dir/clean
+
+.PHONY : tests/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/ContinuousCoverage.dir
@@ -897,6 +917,33 @@ Experimental: CMakeFiles/Experimental.dir/rule
 CMakeFiles/Experimental.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Experimental.dir/build.make CMakeFiles/Experimental.dir/clean
 .PHONY : CMakeFiles/Experimental.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/tester.dir
+
+# All Build rule for target.
+tests/CMakeFiles/tester.dir/all:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tester.dir/build.make tests/CMakeFiles/tester.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tester.dir/build.make tests/CMakeFiles/tester.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/CMakeFiles --progress-num=3,4 "Built target tester"
+.PHONY : tests/CMakeFiles/tester.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/tester.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/tester.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/tester.dir/rule
+
+# Convenience name for target.
+tester: tests/CMakeFiles/tester.dir/rule
+
+.PHONY : tester
+
+# clean rule for target.
+tests/CMakeFiles/tester.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tester.dir/build.make tests/CMakeFiles/tester.dir/clean
+.PHONY : tests/CMakeFiles/tester.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

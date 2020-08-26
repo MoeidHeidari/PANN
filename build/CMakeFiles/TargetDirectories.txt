@@ -32,3 +32,9 @@
 /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/CMakeFiles/ExperimentalMemCheck.dir
 /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/CMakeFiles/Continuous.dir
 /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/CMakeFiles/Experimental.dir
+/Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/tests/CMakeFiles/test.dir
+/Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/tests/CMakeFiles/edit_cache.dir
+/Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/tests/CMakeFiles/rebuild_cache.dir
+/Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/tests/CMakeFiles/package_source.dir
+/Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/tests/CMakeFiles/package.dir
+/Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/tests/CMakeFiles/tester.dir

@@ -288,3 +288,47 @@ Parsed CXX implicit link information from above output:
   implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks]
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e5743/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e5743.dir/build.make CMakeFiles/cmTC_e5743.dir/build
+Building C object CMakeFiles/cmTC_e5743.dir/CheckIncludeFile.c.o
+/usr/bin/clang   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -o CMakeFiles/cmTC_e5743.dir/CheckIncludeFile.c.o   -c /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e5743
+/usr/local/Cellar/cmake/3.17.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5743.dir/link.txt --verbose=1
+/usr/bin/clang   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_e5743.dir/CheckIncludeFile.c.o  -o cmTC_e5743 
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b3ea4/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b3ea4.dir/build.make CMakeFiles/cmTC_b3ea4.dir/build
+Building C object CMakeFiles/cmTC_b3ea4.dir/src.c.o
+/usr/bin/clang   -DCMAKE_HAVE_LIBC_PTHREAD -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -o CMakeFiles/cmTC_b3ea4.dir/src.c.o   -c /Users/moeidheidari/Google_Drive/MACFlies/Projects/PANN/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b3ea4
+/usr/local/Cellar/cmake/3.17.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3ea4.dir/link.txt --verbose=1
+/usr/bin/clang  -DCMAKE_HAVE_LIBC_PTHREAD -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_b3ea4.dir/src.c.o  -o cmTC_b3ea4 
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
