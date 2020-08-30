@@ -19,11 +19,17 @@ namespace PANN
     */
      enum file_extension
     {
+        /** @brief software package: SPSS*/
         sav,
+        /** @brief software package: Stata*/
         dta,
+        /** @brief software package: R*/
         Rdata,
+        /** @brief software package: Excel*/
         xlsx,
+        /** @brief software package: Delimited*/
         csv,
+        /** @brief software package: Delimited*/
         tab
     }extensions;
 

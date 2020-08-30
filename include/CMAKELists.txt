@@ -1,0 +1,4 @@
+add_library(PANNLibrary Foundation/Types/Types.hpp Foundation/Types/Types.cpp)
+add_library(StringLibrary "Foundation/Strings/String.hpp" "Foundation/Strings/String.cpp")
+target_include_directories(PANNLibrary PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/")
+#target_include_directories(StringLibrary PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/")

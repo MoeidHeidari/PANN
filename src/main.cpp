@@ -1,12 +1,19 @@
 
 
 #include <iostream>
-#include "lib/include/Sample.h"
-
+#include <Foundation/Types/Types.hpp>
+#include <Foundation/Strings/String.hpp>
+using namespace PANN::TYPES;
 
 int main(int, char**) 
 {
-    Sample s;
-    s.testFunction();
-    std::cout << "Hello, world!\n";
+    PANN_UInt8 x='B';
+
+    PANNString str;
+    str.print_a_string();
+    
+    
+    std::cout << "\nHello, world!"<<x<<std::endl;
+
+    return 0;
 }

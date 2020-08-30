@@ -1,10 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "fps",
+  0: "cdfprstx",
   1: "p",
-  2: "ps",
-  3: "f",
-  4: "p"
+  2: "pst",
+  3: "p",
+  4: "f",
+  5: "cdrstx",
+  6: "p"
 };
 
 var indexSectionNames =
@@ -12,8 +14,10 @@ var indexSectionNames =
   0: "all",
   1: "namespaces",
   2: "files",
-  3: "enums",
-  4: "defines"
+  3: "typedefs",
+  4: "enums",
+  5: "enumvalues",
+  6: "defines"
 };
 
 var indexSectionLabels =
@@ -21,7 +25,9 @@ var indexSectionLabels =
   0: "All",
   1: "Namespaces",
   2: "Files",
-  3: "Enumerations",
-  4: "Macros"
+  3: "Typedefs",
+  4: "Enumerations",
+  5: "Enumerator",
+  6: "Macros"
 };
 
